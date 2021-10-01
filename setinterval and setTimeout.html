@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut/SetInterval</title>
+</head>
+<body>
+    <div class="container">
+        this is the container and <span id="time"></span>
+    </div>
+    <div class="cont1">
+        this is another container
+    </div>
+</body>
+<script>
+    function greet(name) {
+        console.log("Happy New Year " +name)
+    }
+    // this runs the function once after the specified time
+    // let timeout = setTimeout(greet, 5000, "Shubham");  
+
+    // clearTimeout clears the sheduled thing 
+    // clearTimeout(timeout)
+
+    function showTime() {
+        let time = new Date()
+        console.log(time)
+        document.getElementById('time').innerHTML = time
+    }
+    // setinterval will run the function repeatedly after specified time
+    let timeout = setInterval(showTime, 1000);
+    // clearInterval(timeout)
+</script>
+</html>
